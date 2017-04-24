@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dating Website</title>
+    <style>
+
+		fieldset {
+			background: lightyellow;
+			border-width: 20px;
+			border: solid yellow;
+			margin-bottom:10px;
+			width:720px;
+			vertical-align:top;
+		}
+		label {
+			width:180px;
+			display: inline-block;
+			text-align:right;
+			text-align:top;
+		}
+        label:hover { font-size:40px }
+        input:hover { font-size:20px }
+		.labels{
+		width:auto;
+		text-align:center;
+		}
+		.minrange{
+		text-align:center;
+		background:red;
+		}
+				.maxrange{
+		text-align:center;
+		background:purple;
+		}
+		#checkboxlabel{
+			width:auto;
+		}
+
+		#address{
+			width:360px;
+			height:50px;
+		}
+
+
+    </style>
+
+</head>
+<body>
+<form acction="http://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php " method="post">
+    <fieldset>
+        <legend>Your Face</legend>
+
+        <label for file>Your Image: </label>
+        <input type="file" id="file" name="file" required><br>
+
+        <label for preview>Image preview: </label>
+        <img id="preview" name="preview"><br>
+    </fieldset>
+
+    <fieldset>
+        <legend>Your General Details</legend>
+
+        <label for name>Name: </label>
+        <input type="text" id="name" name="name" placeholder="Your full name" required><br>
+
+        <label for gender>Gender: </label>
+        <input type="radio" id="male" name="gender" value="male" required>
+        <label for="male" class="labels">Male</label>
+        <input type="radio" id="female" name="gender" value="female" required>
+        <label for="female" class="labels">Female</label>
+        <br>
+
+        <label for age>Age: </label>
+        <input type="number" id="age" name="age" value="18" required> <br>
+
+        <label for date>Date of birth: </label>
+        <input type="date" id="date" name="date"> <br>
+
+        <label for color>Favorite color: </label>
+        <input type="color" id="color" name="color"> <br>
+
+        <label for Country>Which Country: </label>
+        <select id="Country" name="Country">
+            <option value="no selection></option>
+            <option value=" volvo>USA
+            </option>
+            <option value="saab>UK</option>
+            <option value=" fiat>LT
+            </option>
+            <option value="audi>FR</option>
+            <option value=" audi>AU
+            </option>
+            <br>
+        </select>
+    </fieldset>
+
+    <fieldset>
+        <legend>Your Indicators</legend>
+
+        <label for height>Hight: </label>
+        <label for min class="labels minrange">Short </label>
+        <input type="range" min="0" max="100" step="1" value="50" id="height" name="height">
+        <label for max class="labels maxrange">Tall </label> <br>
+
+        <label for salary>Salary: </label>
+        <label for min class="labels minrange">Poor</label>
+        <input type="range" min="0" max="100" step="1" value="60" id="salary" name="salary">
+        <label for max class="labels maxrange">Rich</label>
+        <br>
+    </fieldset>
+
+    <fieldset>
+        <legend>You Contact Information</legend>
+
+        <label fro email> Email:</label>
+        <input type="email" id="email" name="email" required><br>
+
+        <label fro tel> Mobile: </label>
+        <input type="tel" id="tel" name="tel"><br>
+
+        <label for address> Address: </label>
+        <input type="textarea" id="address" name="address"><br>
+
+
+        <label for contacttype>Method to contact you:</label>
+        <input type="checkbox" id="ckb_email" name="ckb_email" value="email">
+        <label for ckb_email class="labels"> Email</label>
+        <input type="checkbox" id="ckb_Whatsapp" name="ckb_Whatsapp" value="Whatsapp">
+        <label for ckb_Whatsapp class="labels"> Whatsapp</label>
+        <input type="checkbox" id="ckb_Inappchat" name="ckb_Inappchat" value="Inappchat">
+        <label for ckb_Inappchat class="labels"> In-app Chat</label>
+
+    </fieldset>
+
+    <input type="submit" value="Submit">
+</form>
+
+<script src="https://www.cse.ust.hk/~rossiter/dating_web_site.js"></script>
+</body>
+</html>
